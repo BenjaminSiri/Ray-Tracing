@@ -1,3 +1,4 @@
+// Updated: Chapter 4
 #ifndef VEC3_H
 #define VEC3_H
 
@@ -94,10 +95,11 @@ class vec3 {
                         u.e[0] * v.e[1] - u.e[1] * v.e[0]);
         }
 
-        inline vec3 unit_vector(vec3 v) {
-            return v / v.length();
-        }
 };
+
+inline vec3 unit_vector(const vec3 &v) {
+    return v / v.length();
+}
 
 // Type aliases for vec3
 using point3 = vec3;

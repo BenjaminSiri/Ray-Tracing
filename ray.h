@@ -1,3 +1,4 @@
+// Updated: Chapter 4
 #ifndef RAY_H
 #define RAY_H
 

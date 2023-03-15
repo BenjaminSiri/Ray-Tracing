@@ -1,3 +1,4 @@
+// Updated: Chapter 4
 #ifndef COLOR_H
 #define COLOR_H
 
