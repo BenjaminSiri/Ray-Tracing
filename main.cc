@@ -1,3 +1,6 @@
+#include "color.h"
+#include "vec3.h"
+
 #include <iostream>
 
 int main(){
@@ -6,7 +9,7 @@ int main(){
     const int image_width = 256;
     const int image_height = 256;
 
-    // render
+    // render 
 
     std::cout << "P3\n" << image_width << ' ' << image_height << "\n255\n";
 
@@ -14,17 +17,9 @@ int main(){
         //Progress indicator
         std::cerr << "\rScaleLines remaining: " << j << ' ' << std::flush;
         for (int i=0; i < image_width; i++){
-            auto r = double(i) / (image_width-1); // *Auto: deduce the type
-            auto g = double(j) / (image_height-1);
-            auto b = .25;
-
-            int ir = static_cast<int>(255.999 * r);
-            int ig = static_cast<int>(255.999 * g);
-            int ib = static_cast<int>(255.999 * b);
-
-            std::cout << ir << ' ' << ig << ' ' << ib << '\n';
+            color pixel_color(double(i)/(image_width-1), .25, double(j)/(image_height-1));
+            write_color(std::cout, pixel_color);
         }
     }
-
     std::cerr << "\nDone.\n";
 }
