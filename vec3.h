@@ -7,8 +7,8 @@
 using std::sqrt;
 
 class vec3 {
+    double e[3];
     public:
-        //double e[3];
         vec3() {
             e[0] = 0;
             e[1] = 0;
@@ -97,8 +97,6 @@ class vec3 {
         inline vec3 unit_vector(vec3 v) {
             return v / v.length();
         }
-
-        double e[3];
 };
 
 // Type aliases for vec3
