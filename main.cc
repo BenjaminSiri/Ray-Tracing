@@ -17,7 +17,7 @@ int main(){
         //Progress indicator
         std::cerr << "\rScaleLines remaining: " << j << ' ' << std::flush;
         for (int i=0; i < image_width; i++){
-            color pixel_color(double(i)/(image_width-1), .25, double(j)/(image_height-1));
+            color pixel_color(double(i)/(image_width-1), 0.25, double(j)/(image_height-1));
             write_color(std::cout, pixel_color);
         }
     }
